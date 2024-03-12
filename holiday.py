@@ -35,25 +35,18 @@ print("")
 print("The cost of your hotel stay will be: " + " £ " + str(hotel_cost(num_nights)))
 
 
-
 def plane_cost(city_flight):
+    city_costs = {
+        "LONDON": 125,
+        "PARIS": 100,
+        "MADRID": 80,
+        "ROME": 75,
+        "DUBAI": 60,
+        "BERLIN": 60,
+        "DUBLIN": 60
+    }
     
-    if city_flight.upper() == "LONDON":
-        flight_cost = 125
-        
-    elif city_flight.upper() == "PARIS":
-        flight_cost = 100
-        
-    elif city_flight.upper() == "MADRID":
-        flight_cost = 80
-        
-    elif city_flight.upper() == "ROME":
-        flight_cost = 75
-        
-    else:
-        flight_cost = 60
-        
-    return flight_cost
+    return city_costs.get(city_flight.upper(), 60)
 
 print("")    
 print("The cost of your flight will be: " + " £ " + str(plane_cost(city_flight)))  
