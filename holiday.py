@@ -12,7 +12,9 @@
 
 # Uses pre-determined costs for each input choice
 
+
 # Calculates total cost of holiday taking in flight cost and daily cost of stay and car rent multiplied by users input for length.
+
 
 city_flight = input(" What city are you looking to fly to? Popular destinations include: London, Paris, Rome and Madrid. " + " \n ")
 
@@ -30,9 +32,14 @@ def hotel_cost(num_nights):
     return num_cost
 
 print("")
+
 print("-"*60)   
+
 print("") 
+
 print("The cost of your hotel stay will be: " + " £ " + str(hotel_cost(num_nights)))
+
+
 
 
 
@@ -55,11 +62,14 @@ def plane_cost(city_flight):
         
     return flight_cost
 
+
 print("")    
+
 print("The cost of your flight will be: " + " £ " + str(plane_cost(city_flight)))  
 
 
     
+
 def car_rental(rental_days):
     
     one_rental_day = 60
@@ -69,6 +79,7 @@ def car_rental(rental_days):
     return rental_cost
 
 print("")
+
 print("The total cost of renting a car will  be: " + " £ " + str(car_rental(rental_days)))    
 
 
@@ -81,8 +92,11 @@ def holiday_cost(hotel_cost, plane_cost, car_rental):
     return total_cost
 
 print("")
+
 print("-"*60)
+
 print("")
+
 print("The total cost of your holiday will be: " + " £ " + str(holiday_cost(hotel_cost, plane_cost, car_rental)))
    
     
